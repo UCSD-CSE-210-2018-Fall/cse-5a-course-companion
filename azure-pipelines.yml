@@ -21,7 +21,3 @@ steps:
       cd frontend
       npm run test:e2e
     displayName: "frontend e2e test"
-
-  - script: |
-      pm2 stop api-server
-    displayName: "stop serving backend"
