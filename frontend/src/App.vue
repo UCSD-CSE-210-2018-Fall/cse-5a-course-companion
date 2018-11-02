@@ -1,9 +1,9 @@
 <template>
   <div>
     <Header></Header>
-    <div id="app" class="container">
+    <b-container id="app">
       <router-view></router-view>
-    </div>
+    </b-container>
   </div>
 </template>
 
@@ -12,12 +12,11 @@ import "bootstrap/dist/css/bootstrap.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
 import Header from "./components/Header.vue"
 
-
 export default {
   name: "app",
   components: {
     Header
-  },
+  }
 }
 </script>
 
