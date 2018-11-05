@@ -8,8 +8,8 @@
           </div>
         </div>
         <b-list-group v-for="(choice, index) in choices" :key="index">
-          <label class="list-group-item list-group-item-action" :for="`choice${index}`" :class="{'active':chosen === index}">
-            <input class="d-none" type="radio" name="options" :id="`choice${index}`" v-model="chosen" :value="index">{{choice}}
+          <label class="list-group-item list-group-item-action" :for="`${uuid}choice${index}`" :class="{'active':chosen === index}">
+            <input class="d-none" type="radio" name="options" :id="`${uuid}choice${index}`" v-model="chosen" :value="index">{{choice}}
           </label>
         </b-list-group>
         <b-button :disabled="submitDisabled" @click="onSubmit" variant="outline-primary" class="my-3">Submit</b-button>
@@ -21,51 +21,34 @@
 </template>
 
 <script>
+import { uuid } from "vue-uuid"
+
 export default {
   name: "MultipleChoice",
   props: {
     question: {
       type: String,
-      required: true,
-      default: "What is this line?"
+      required: true
     },
     code: {
-      type: String,
-      required: true,
-      default: `int function2(int num, int times);`
+      type: String
     },
     choices: {
       type: Array,
-      required: true,
-      default: function() {
-        return [
-          "C Preprocessor define",
-          "Function Prototype",
-          "Local Variable",
-          "Function Definition"
-        ]
-      }
+      required: true
     },
     explanations: {
       type: Array,
-      required: true,
-      default: function() {
-        return [
-          "This is not #define.",
-          null,
-          "This is not a variable declaration. ",
-          "There is no function body. "
-        ]
-      }
+      required: true
     },
     correctChoice: {
       type: Number,
-      required: true,
-      default: 1
+      required: true
     }
   },
   data() {
     return {
+      uuid: uuid.v4(),
       showAlert: false,
       chosen: null,
       msg: null,
