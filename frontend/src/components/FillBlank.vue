@@ -2,7 +2,10 @@
     <div class="card my-3">
       <b-card header="<strong>Fill in the Blank</strong>">
         <div>
-          <div class="mb-3" v-html="question"></div>
+          <div class="mb-3">
+            <p><strong>{{question}}</strong></p>
+            <pre v-if="code"><code>{{code}}</code></pre>
+          </div>
         </div>
         <b-form>
           <b-form-group label="Answer" label-for="input" :invalid-feedback="invalidFeedback" :state="state">
@@ -23,25 +26,17 @@ export default {
   props: {
     question: {
       type: String,
-      required: true,
-      default: `<p><strong>What is the 3rd line (counting from 1) printed in the following block of statements?</strong></p>
-<pre><code>int i = 1;
-int j = 6;
-while (i < j) {
-  printf("%d %d\\n", i, j - i);
-  ++i;
-}
-</code></pre>`
+      required: true
+    },
+    code: {
+      type: String
     },
     explanation: {
       type: String,
-      required: true,
-      default:
-        "Consider the change of i at the end of each iteration and the print format. "
+      required: true
     },
     correctAnswer: {
-      required: true,
-      default: "3 3"
+      required: true
     }
   },
   data() {
