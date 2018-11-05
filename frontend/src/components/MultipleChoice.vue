@@ -2,7 +2,10 @@
     <div class="card my-3">
       <b-card header="<strong>Multiple Choice</strong>">
         <div>
-          <div class="mb-3" v-html="question"></div>
+          <div class="mb-3">
+            <p><strong>{{question}}</strong></p>
+            <pre v-if="code"><code>{{code}}</code></pre>
+          </div>
         </div>
         <b-list-group v-for="(choice, index) in choices" :key="index">
           <label class="list-group-item list-group-item-action" :for="`choice${index}`" :class="{'active':chosen === index}">
@@ -24,8 +27,12 @@ export default {
     question: {
       type: String,
       required: true,
-      default: `<p><strong>What is this line?</strong></p>
-        <code>int function2(int num, int times);</code>`
+      default: "What is this line?"
+    },
+    code: {
+      type: String,
+      required: true,
+      default: `int function2(int num, int times);`
     },
     choices: {
       type: Array,
