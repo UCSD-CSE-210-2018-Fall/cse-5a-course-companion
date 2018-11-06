@@ -1,7 +1,10 @@
 <template>
   <div>
-    <h2>Quiz prototype</h2>
+    <h2>Quiz</h2>
     <b-row class="justify-content-center">
+      <b-col md="12">
+        <REPL v-bind="repl"></REPL>
+      </b-col>
       <b-col md="6">
         <MultipleChoice v-bind="mc1"></MultipleChoice>
       </b-col>
@@ -27,11 +30,18 @@
 <script>
 import MultipleChoice from "./components/MultipleChoice.vue"
 import FillBlank from "./components/FillBlank.vue"
+import REPL from "./components/REPL.vue"
 
 export default {
   name: "Quiz",
   data() {
     return {
+      repl: {
+        question:
+          "Fill in the blanks with the appropriate types and format specifiers to output the values correctly.",
+        user: "@tommyang",
+        id: "TypeAndFormatSpecifier"
+      },
       mc1: {
         question: "What is this line?",
         code: `int function2(int num, int times);`,
@@ -118,7 +128,8 @@ export default {
   },
   components: {
     MultipleChoice,
-    FillBlank
+    FillBlank,
+    REPL
   },
   methods: {}
 }
