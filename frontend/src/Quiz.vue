@@ -349,14 +349,14 @@ export default {
       },
       fb8: {
         question:
-          "Convert this for loop to a while loop. Answer should be in the form of 'int x = 5;\\nwhile(x<10){\\n i++}'.",
+          "Convert this for loop to a while loop. Answer should be in the form of 'int x = 5; while(x < 10){x = x + 5;}'.",
         code: `
           for(int k = 0; k < 19; k = k + 2){}
         `,
         explanation: "",
-        correctAnswer: "int k = 0\\nwhile(k < 19){\\nk = k + 2}"
+        correctAnswer: "int k = 0; while(k < 19){k = k + 2;}"
       },
-      fb8: {
+      fb9: {
         question: "What is printed is the input is 42",
         code: `
         void jabbaTheHutt(int money);
