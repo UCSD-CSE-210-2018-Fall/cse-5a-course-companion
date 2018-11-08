@@ -335,23 +335,24 @@ export default {
         correctAnswer: "3 hamburgers made\nwoofwoofwoof"
       },
       fb7: {
-        question: "Convert this while loop to a for loop",
+        question:
+          "Convert this while loop to a for loop. Answer should be in the form of 'for(int x = 5; x < 10; i++){}'",
         code: `
           int i = 0;
           while(i < 5){
             i++;
           }
         `,
-        explanation: "answer should look like 'for(int x = 5; x < 10; i++){}'",
+        explanation: "",
         correctAnswer: "for(int i = 0; i < 5; i++){}"
       },
       fb8: {
-        question: "Convert this for loop to a while loop",
+        question:
+          "Convert this for loop to a while loop. Answer should be in the form of 'int x = 5;\\nwhile(x<10){\\n i++}'.",
         code: `
           for(int k = 0; k < 19; k = k + 2){}
         `,
-        explanation:
-          "answer should look like 'int x = 5;\\nwhile(x<10){\\n i++}'",
+        explanation: "",
         correctAnswer: "int k = 0\\nwhile(k < 19){\\nk = k + 2}"
       },
       fb8: {
