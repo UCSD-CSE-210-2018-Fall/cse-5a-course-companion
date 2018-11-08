@@ -55,7 +55,7 @@
       <b-col md="6">
         <FillBlank v-bind="fb7"></FillBlank>
       </b-col>
-      <b-col md="6">
+      <b-col md="8">
         <FillBlank v-bind="fb8"></FillBlank>
       </b-col>
 
@@ -250,7 +250,8 @@ export default {
         correctAnswer: "12"
       },
       fb4: {
-        question: "What is printed as a result of this block of code?",
+        question:
+          "What is printed as a result of this block of code? If there is a new line, type 'line one\\nline2'",
         code: `
         int x = 5;
 
@@ -274,14 +275,15 @@ export default {
             x = 42;
         }
 
-        printf("x = %d\\n", x);
+        printf("x = %d", x);
         `,
         explanation:
-          "If there is a new line, type 'line one\nline2' Make sure to review how switch statements and break statements work in conjunction with one another",
+          "Make sure to review how switch statements and break statements work in conjunction with one another",
         correctAnswer: "Am\\nA Robot\\nx = 0"
       },
       fb5: {
-        question: "What is printed as a result of this block of code?",
+        question:
+          "What is the last line printed as a result of this block of code?",
         code: `
         #define YEAR 2018
 
