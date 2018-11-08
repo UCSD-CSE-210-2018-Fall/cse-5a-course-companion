@@ -7,9 +7,10 @@
         <b-nav-item to="/" exact>Home</b-nav-item>
         <b-nav-item to="/quiz">Quiz</b-nav-item>
       </b-navbar-nav>
-      <!-- Right aligned nav items
-      <b-navbar-nav class="ml-auto">
-      </b-navbar-nav>
+      <!--
+        Right aligned nav items
+        <b-navbar-nav class="ml-auto">
+        </b-navbar-nav>
       -->
     </b-collapse>
   </b-navbar>
@@ -27,5 +28,4 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
+<style scoped></style>

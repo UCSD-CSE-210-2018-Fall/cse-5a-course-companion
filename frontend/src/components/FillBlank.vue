@@ -1,22 +1,40 @@
 <template>
-    <div class="card my-3">
-      <b-card header="<strong>Fill in the Blank</strong>">
-        <div>
-          <div class="mb-3">
-            <p><strong>{{question}}</strong></p>
-            <pre v-if="code"><code>{{code}}</code></pre>
-          </div>
+  <div class="card my-3">
+    <b-card header="<strong>Fill in the Blank</strong>">
+      <div>
+        <div class="mb-3">
+          <p>
+            <strong>{{ question }}</strong>
+          </p>
+          <pre v-if="code"><code>{{code}}</code></pre>
         </div>
-        <b-form>
-          <b-form-group label="Answer" label-for="input" :invalid-feedback="invalidFeedback" :state="state">
-            <b-form-input id="input" v-model="answer" required></b-form-input>
-          </b-form-group>
-          <b-button :disabled="!state" @click="onSubmit" type="submit" variant="outline-primary" class="my-3">Submit</b-button>
-        </b-form>
-        <b-alert :show="showAlert" class="my-3" :variant="correct ? 'success' : 'warning'">
-          {{msg}}
-        </b-alert>
-      </b-card>
+      </div>
+      <b-form>
+        <b-form-group
+          label="Answer"
+          label-for="input"
+          :invalid-feedback="invalidFeedback"
+          :state="state"
+        >
+          <b-form-input id="input" v-model="answer" required></b-form-input>
+        </b-form-group>
+        <b-button
+          :disabled="!state"
+          @click="onSubmit"
+          type="submit"
+          variant="outline-primary"
+          class="my-3"
+          >Submit</b-button
+        >
+      </b-form>
+      <b-alert
+        :show="showAlert"
+        class="my-3"
+        :variant="correct ? 'success' : 'warning'"
+      >
+        {{ msg }}
+      </b-alert>
+    </b-card>
   </div>
 </template>
 
@@ -77,7 +95,4 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.list-group-item .active {
-}
-</style>
+<style scoped></style>
