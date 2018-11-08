@@ -300,7 +300,8 @@ export default {
         correctAnswer: "255"
       },
       fb6: {
-        question: "What is printed as a result of this block of code?",
+        question:
+          "What is printed as a result of this block of code? If there is a new line, type 'line one\\nline2'. ",
         code: `
           int makeHam(int patties, int buns);
           void barkDog(int food);
@@ -332,7 +333,7 @@ export default {
          `,
         explanation:
           "Make sure you know how functions work and how integer division works.",
-        correctAnswer: "3 hamburgers made\nwoofwoofwoof"
+        correctAnswer: "3 hamburgers made\\nwoofwoofwoof"
       },
       fb7: {
         question:
