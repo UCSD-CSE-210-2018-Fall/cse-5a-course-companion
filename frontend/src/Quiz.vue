@@ -40,6 +40,12 @@
       <b-col md="6">
         <FillBlank v-bind="fb4"></FillBlank>
       </b-col>
+      <b-col md="6">
+        <FillBlank v-bind="fb5"></FillBlank>
+      </b-col>
+      <b-col md="6">
+        <FillBlank v-bind="fb6"></FillBlank>
+      </b-col>
 
 
     </b-row>
@@ -225,7 +231,7 @@ export default {
             x += 5;
             break;
           case 1:
-            printf("Am\]n");
+            printf("Am\\n");
             x *= 2;
 
           case 2:
@@ -242,6 +248,56 @@ export default {
         `,
         explanation: "If there is a new line, type 'line one\nline2' Make sure to review how switch statements and break statements work in conjunction with one another",
         correctAnswer: "Am\\nA Robot\\nx = 0"
+      },
+      fb5: {
+        question: "What is printed as a resulted of this block of code?",
+        code: `
+        #define YEAR 2018
+
+        int x = YEAR % 2000;
+        int result = 1;
+        do{
+          result *= result + 2;
+          printf("%d\\n",result);
+        }while(result < x);
+
+        `,
+        explanation: "Make sure you know how *=, +=, -= operators and do while loops work.",
+        correctAnswer: "255"
+      },
+      fb6: {
+        question: "What is printed as a resulted of this block of code?",
+        code: `
+          int makeHam(int patties, int buns);
+          void barkDog(int food);
+
+          int main(void){
+              int patties = 3;
+              int buns = 8;
+
+              int hamburgers = makeHam(patties, buns);
+              printf("%d hamburgers made\\n",hamburgers);
+
+              barkDog(hamburgers);
+
+              return 0;
+
+          }
+
+          int makeHam(int patties, int buns){
+              return patties/buns;
+          }
+
+          void barkDog(int food){
+              for(int i = 0; i < food; i++){
+                  printf("woof");
+              }
+          }
+
+
+         `,
+        explanation: "Make sure you know how functions work and how integer division works.",
+        correctAnswer: "3 hamburgers made\nwoofwoofwoof"
       }
     }
   },
