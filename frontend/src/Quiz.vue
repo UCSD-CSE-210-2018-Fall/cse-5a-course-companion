@@ -306,7 +306,7 @@ export default {
           void barkDog(int food);
 
           int main(void){
-              int patties = 3;
+              int patties = 25;
               int buns = 8;
 
               int hamburgers = makeHam(patties, buns);
