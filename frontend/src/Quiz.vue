@@ -136,14 +136,8 @@ export default {
         correctChoice: 2
       },
       mc5: {
-        question:
-          "Which of the following is a valid C identifier",
-        choices: [
-          "42answers2Life",
-          "float",
-          "m&m",
-          "cash_Money"
-        ],
+        question: "Which of the following is a valid C identifier",
+        choices: ["42answers2Life", "float", "m&m", "cash_Money"],
         explanations: [
           "Variable names cannot begin with numbers",
           "float is a datatype and a C reserved key word",
@@ -153,14 +147,8 @@ export default {
         correctChoice: 3
       },
       mc6: {
-        question:
-          "Which of the following is a valid C identifier",
-        choices: [
-          "long",
-          "_underTaker",
-          "\\backslash!",
-          "-yikes-"
-        ],
+        question: "Which of the following is a valid C identifier",
+        choices: ["long", "_underTaker", "\\backslash!", "-yikes-"],
         explanations: [
           "long is a basic datatype and a C reserved keyword",
           null,
@@ -170,10 +158,8 @@ export default {
         correctChoice: 1
       },
       mc7: {
-        question:
-          "Which is taylor in the first line?",
-        code: 
-          `void awardCeremony(int taylor, int kanye){ //hold up }`,
+        question: "Which is taylor in the first line?",
+        code: `void awardCeremony(int taylor, int kanye){ //hold up }`,
         choices: [
           "Function Prototype",
           "Local Variable",
@@ -189,8 +175,7 @@ export default {
         correctChoice: 2
       },
       mc8: {
-        question:
-          "What is this line?",
+        question: "What is this line?",
         code: `void endless(void);`,
         choices: [
           "Function Definition",
@@ -251,8 +236,7 @@ export default {
       },
       fb3: {
         question: "What is printed as a result of this block of code?",
-        code: 
-        `
+        code: `
         int x;
         int y = 7;
         int b = y + 3;
@@ -293,7 +277,8 @@ export default {
 
         printf("x = %d\\n", x);
         `,
-        explanation: "If there is a new line, type 'line one\nline2' Make sure to review how switch statements and break statements work in conjunction with one another",
+        explanation:
+          "If there is a new line, type 'line one\nline2' Make sure to review how switch statements and break statements work in conjunction with one another",
         correctAnswer: "Am\\nA Robot\\nx = 0"
       },
       fb5: {
@@ -309,7 +294,8 @@ export default {
         }while(result < x);
 
         `,
-        explanation: "Make sure you know how *=, +=, -= operators and do while loops work.",
+        explanation:
+          "Make sure you know how *=, +=, -= operators and do while loops work.",
         correctAnswer: "255"
       },
       fb6: {
@@ -343,7 +329,8 @@ export default {
 
 
          `,
-        explanation: "Make sure you know how functions work and how integer division works.",
+        explanation:
+          "Make sure you know how functions work and how integer division works.",
         correctAnswer: "3 hamburgers made\nwoofwoofwoof"
       },
       fb7: {
@@ -362,7 +349,8 @@ export default {
         code: `
           for(int k = 0; k < 19; k = k + 2){}
         `,
-        explanation: "answer should look like 'int x = 5;\\nwhile(x<10){\\n i++}'",
+        explanation:
+          "answer should look like 'int x = 5;\\nwhile(x<10){\\n i++}'",
         correctAnswer: "int k = 0\\nwhile(k < 19){\\nk = k + 2}"
       },
       fb8: {
@@ -384,7 +372,8 @@ export default {
         }
         `,
         explanation: "local variable changes are erased unless returned",
-        correctAnswer: "You have paid me 42 Imperial Credits\\nI still have 42 Imperial Credits"
+        correctAnswer:
+          "You have paid me 42 Imperial Credits\\nI still have 42 Imperial Credits"
       }
     }
   },
