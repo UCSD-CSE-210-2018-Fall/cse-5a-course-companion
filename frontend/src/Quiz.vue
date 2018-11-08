@@ -2,64 +2,27 @@
   <div>
     <h2>Quiz</h2>
     <b-row class="justify-content-center">
-      <b-col md="12">
-        <REPL v-bind="repl"></REPL>
-      </b-col>
-      <b-col md="6">
-        <MultipleChoice v-bind="mc1"></MultipleChoice>
-      </b-col>
-      <b-col md="6">
-        <MultipleChoice v-bind="mc2"></MultipleChoice>
-      </b-col>
-      <b-col md="6">
-        <MultipleChoice v-bind="mc3"></MultipleChoice>
-      </b-col>
-      <b-col md="6">
-        <MultipleChoice v-bind="mc4"></MultipleChoice>
-      </b-col>
-      <b-col md="6">
-        <MultipleChoice v-bind="mc5"></MultipleChoice>
-      </b-col>
-      <b-col md="6">
-        <MultipleChoice v-bind="mc6"></MultipleChoice>
-      </b-col>
-       <b-col md="6">
-        <MultipleChoice v-bind="mc7"></MultipleChoice>
-      </b-col>
-      <b-col md="6">
-        <MultipleChoice v-bind="mc8"></MultipleChoice>
-      </b-col>
-      <b-col md="6">
-        <MultipleChoice v-bind="mc9"></MultipleChoice>
-      </b-col>
+      <b-col md="12"><REPL v-bind="repl"></REPL></b-col>
 
+      <b-col md="6"><MultipleChoice v-bind="mc1"></MultipleChoice></b-col>
+      <b-col md="6"><MultipleChoice v-bind="mc2"></MultipleChoice></b-col>
+      <b-col md="6"><MultipleChoice v-bind="mc3"></MultipleChoice></b-col>
+      <b-col md="6"><MultipleChoice v-bind="mc4"></MultipleChoice></b-col>
+      <b-col md="6"><MultipleChoice v-bind="mc5"></MultipleChoice></b-col>
+      <b-col md="6"><MultipleChoice v-bind="mc6"></MultipleChoice></b-col>
+      <b-col md="6"><MultipleChoice v-bind="mc7"></MultipleChoice></b-col>
+      <b-col md="6"><MultipleChoice v-bind="mc8"></MultipleChoice></b-col>
+      <b-col md="6"><MultipleChoice v-bind="mc9"></MultipleChoice></b-col>
 
-      <b-col md="6">
-        <FillBlank v-bind="fb1"></FillBlank>
-      </b-col>
-      <b-col md="6">
-        <FillBlank v-bind="fb2"></FillBlank>
-      </b-col>
-      <b-col md="6">
-        <FillBlank v-bind="fb3"></FillBlank>
-      </b-col>
-      <b-col md="6">
-        <FillBlank v-bind="fb4"></FillBlank>
-      </b-col>
-      <b-col md="6">
-        <FillBlank v-bind="fb5"></FillBlank>
-      </b-col>
-      <b-col md="6">
-        <FillBlank v-bind="fb6"></FillBlank>
-      </b-col>
-      <b-col md="6">
-        <FillBlank v-bind="fb7"></FillBlank>
-      </b-col>
-      <b-col md="8">
-        <FillBlank v-bind="fb8"></FillBlank>
-      </b-col>
-
-
+      <b-col md="6"><FillBlank v-bind="fb1"></FillBlank></b-col>
+      <b-col md="6"><FillBlank v-bind="fb2"></FillBlank></b-col>
+      <b-col md="6"><FillBlank v-bind="fb3"></FillBlank></b-col>
+      <b-col md="6"><FillBlank v-bind="fb4"></FillBlank></b-col>
+      <b-col md="6"><FillBlank v-bind="fb5"></FillBlank></b-col>
+      <b-col md="6"><FillBlank v-bind="fb6"></FillBlank></b-col>
+      <b-col md="6"><FillBlank v-bind="fb7"></FillBlank></b-col>
+      <b-col md="6"><FillBlank v-bind="fb8"></FillBlank></b-col>
+      <b-col md="6"><FillBlank v-bind="fb9"></FillBlank></b-col>
     </b-row>
   </div>
 </template>
@@ -390,5 +353,4 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
+<style scoped></style>
