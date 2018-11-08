@@ -74,8 +74,7 @@ export default {
   data() {
     return {
       repl: {
-        question:
-          "Fill in the blanks with the appropriate types and format specifiers to output the values correctly.",
+        question: "",
         user: "@chz025",
         id: "CSE-MidTerm-Test"
       },
@@ -195,10 +194,10 @@ export default {
         question:
           "Which of the following is the correct way to initialize a float?",
         choices: [
-          "float duck = 4.20f",
+          "float duck = 4.20f;",
           "float f = 5;",
-          "float = 7.0",
-          "fl flock = 'f'"
+          "float = 7.0;",
+          "fl flock = 'f';"
         ],
         explanations: [
           null,
@@ -358,22 +357,22 @@ export default {
         code: `
         void jabbaTheHutt(int money);
 
-        int main(){
+        int main() {
           int units;
           scanf("%d",&units);
-          jabbaTheHutt(money);
-          printf("I still have %d Imperial Cretits",units);
+          jabbaTheHutt(units);
+          printf("I still have %d Imperial Credits", units);
           return 0;
         }
 
         void jabbaTheHutt(int money){
-            printf("You have paid me %d Imperial Credits", money);
+            printf("You have paid me %d Imperial Credits ", money);
             money = money - 15;
         }
         `,
         explanation: "local variable changes are erased unless returned",
         correctAnswer:
-          "You have paid me 42 Imperial Credits\\nI still have 42 Imperial Credits"
+          "You have paid me 42 Imperial Credits I still have 42 Imperial Credits"
       }
     }
   },
