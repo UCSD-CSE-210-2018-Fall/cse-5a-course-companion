@@ -76,8 +76,8 @@ export default {
       repl: {
         question:
           "Fill in the blanks with the appropriate types and format specifiers to output the values correctly.",
-        user: "@tommyang",
-        id: "TypeAndFormatSpecifier"
+        user: "@chz025",
+        id: "CSE-MidTerm-Test"
       },
       mc1: {
         question: "What is this line?",
