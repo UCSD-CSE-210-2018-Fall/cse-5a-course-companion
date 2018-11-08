@@ -18,11 +18,30 @@
         <MultipleChoice v-bind="mc4"></MultipleChoice>
       </b-col>
       <b-col md="6">
+        <MultipleChoice v-bind="mc5"></MultipleChoice>
+      </b-col>
+      <b-col md="6">
+        <MultipleChoice v-bind="mc6"></MultipleChoice>
+      </b-col>
+       <b-col md="6">
+        <MultipleChoice v-bind="mc7"></MultipleChoice>
+      </b-col>
+
+
+      <b-col md="6">
         <FillBlank v-bind="fb1"></FillBlank>
       </b-col>
       <b-col md="6">
         <FillBlank v-bind="fb2"></FillBlank>
       </b-col>
+      <b-col md="6">
+        <FillBlank v-bind="fb3"></FillBlank>
+      </b-col>
+      <b-col md="6">
+        <FillBlank v-bind="fb4"></FillBlank>
+      </b-col>
+
+
     </b-row>
   </div>
 </template>
@@ -98,6 +117,59 @@ export default {
         ],
         correctChoice: 2
       },
+      mc5: {
+        question:
+          "Which of the following is a valid C identifier",
+        choices: [
+          "42answers2Life",
+          "float",
+          "m&m",
+          "cash_Money"
+        ],
+        explanations: [
+          "Variable names cannot begin with numbers",
+          "float is a datatype and a C reserved key word",
+          "& is a character that is not allowed to be",
+          null
+        ],
+        correctChoice: 3
+      },
+      mc6: {
+        question:
+          "Which of the following is a valid C identifier",
+        choices: [
+          "long",
+          "_underTaker",
+          "\\backslash!",
+          "-yikes-"
+        ],
+        explanations: [
+          "long is a basic datatype and a C reserved keyword",
+          null,
+          "backslash and '!' are not allowed in varibale names",
+          "'-' is not allowed in variable names"
+        ],
+        correctChoice: 1
+      },
+      mc7: {
+        question:
+          "Which is taylor in the first line?",
+        code: 
+          `void awardCeremony(int taylor, int kanye){ //hold up }`,
+        choices: [
+          "Function Prototype",
+          "Local Variable",
+          "Formal Parameter",
+          "Actual Argument"
+        ],
+        explanations: [
+          "There are braces at the end which indicate that the line as a whole is a Function definition. A Function Prototype looks like 'int petDog();",
+          "This is a local variable but the overarching answer is a Formal Parameter. ",
+          null,
+          "An actual argument is an argument passed to the function when it is called. For example when you call scanf('%d',i), '%d', and i are actual arguments."
+        ],
+        correctChoice: 2
+      },
       fb1: {
         question:
           "What is the 3rd line (counting from 1) printed in the following block of statements?",
@@ -123,6 +195,53 @@ export default {
         printf("%d\\n", i);`,
         explanation: "Look up precedence table for guidance. ",
         correctAnswer: "0"
+      },
+      fb3: {
+        question: "What is printed as a resulted of this block of code?",
+        code: 
+        `
+        int x;
+        int y = 7;
+        int b = y + 3;
+        x = b * 2 % y;
+
+        if(x > b - 1)
+            printf("%d\\n",b);
+        else
+            printf("%d\\n",x * 2);
+        `,
+        explanation: "Look up precedence table for guidance",
+        correctAnswer: "12"
+      },
+      fb4: {
+        question: "What is printed as a resulted of this block of code?",
+        code: `
+        int x = 5;
+
+        switch(x > x % 3)
+        {
+          case 0:
+            printf("I\\n");
+            x += 5;
+            break;
+          case 1:
+            printf("Am\]n");
+            x *= 2;
+
+          case 2:
+            printf("A Robot\\n");
+            x = x % x;
+            break;
+
+          default:
+            printf("Save me\\n");
+            x = 42;
+        }
+
+        printf("x = %d\\n", x);
+        `,
+        explanation: "If there is a new line, type 'line one\nline2' Make sure to review how switch statements and break statements work in conjunction with one another",
+        correctAnswer: "Am\\nA Robot\\nx = 0"
       }
     }
   },
