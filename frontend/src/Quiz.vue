@@ -26,6 +26,12 @@
        <b-col md="6">
         <MultipleChoice v-bind="mc7"></MultipleChoice>
       </b-col>
+      <b-col md="6">
+        <MultipleChoice v-bind="mc8"></MultipleChoice>
+      </b-col>
+      <b-col md="6">
+        <MultipleChoice v-bind="mc9"></MultipleChoice>
+      </b-col>
 
 
       <b-col md="6">
@@ -45,6 +51,12 @@
       </b-col>
       <b-col md="6">
         <FillBlank v-bind="fb6"></FillBlank>
+      </b-col>
+      <b-col md="6">
+        <FillBlank v-bind="fb7"></FillBlank>
+      </b-col>
+      <b-col md="6">
+        <FillBlank v-bind="fb8"></FillBlank>
       </b-col>
 
 
@@ -176,6 +188,41 @@ export default {
         ],
         correctChoice: 2
       },
+      mc8: {
+        question:
+          "What is this line?",
+        code: `void endless(void);`,
+        choices: [
+          "Function Definition",
+          "Local Variable",
+          "Return Type",
+          "Function Prototype"
+        ],
+        explanations: [
+          "This is not a definition since no code is provided for the implementation of the function",
+          "There are no variables in this line",
+          "The return type is part of the line, but not the whole line",
+          null
+        ],
+        correctChoice: 3
+      },
+      mc9: {
+        question:
+          "Which of the following is the correct way to initialize a float?",
+        choices: [
+          "float duck = 4.20f",
+          "float f = 5;",
+          "float = 7.0",
+          "fl flock = 'f'"
+        ],
+        explanations: [
+          null,
+          "5 is not a float so cannot be assigned",
+          "7.0 is a double so cannot be assinged",
+          "This is just wrong"
+        ],
+        correctChoice: 0
+      },
       fb1: {
         question:
           "What is the 3rd line (counting from 1) printed in the following block of statements?",
@@ -191,7 +238,7 @@ export default {
         correctAnswer: "3 3"
       },
       fb2: {
-        question: "What is printed as a resulted of this block of code?",
+        question: "What is printed as a result of this block of code?",
         code: `
         int i;
         int j = 6;
@@ -203,7 +250,7 @@ export default {
         correctAnswer: "0"
       },
       fb3: {
-        question: "What is printed as a resulted of this block of code?",
+        question: "What is printed as a result of this block of code?",
         code: 
         `
         int x;
@@ -220,7 +267,7 @@ export default {
         correctAnswer: "12"
       },
       fb4: {
-        question: "What is printed as a resulted of this block of code?",
+        question: "What is printed as a result of this block of code?",
         code: `
         int x = 5;
 
@@ -250,7 +297,7 @@ export default {
         correctAnswer: "Am\\nA Robot\\nx = 0"
       },
       fb5: {
-        question: "What is printed as a resulted of this block of code?",
+        question: "What is printed as a result of this block of code?",
         code: `
         #define YEAR 2018
 
@@ -266,7 +313,7 @@ export default {
         correctAnswer: "255"
       },
       fb6: {
-        question: "What is printed as a resulted of this block of code?",
+        question: "What is printed as a result of this block of code?",
         code: `
           int makeHam(int patties, int buns);
           void barkDog(int food);
@@ -298,6 +345,46 @@ export default {
          `,
         explanation: "Make sure you know how functions work and how integer division works.",
         correctAnswer: "3 hamburgers made\nwoofwoofwoof"
+      },
+      fb7: {
+        question: "Convert this while loop to a for loop",
+        code: `
+          int i = 0;
+          while(i < 5){
+            i++;
+          }
+        `,
+        explanation: "answer should look like 'for(int x = 5; x < 10; i++){}'",
+        correctAnswer: "for(int i = 0; i < 5; i++){}"
+      },
+      fb8: {
+        question: "Convert this for loop to a while loop",
+        code: `
+          for(int k = 0; k < 19; k = k + 2){}
+        `,
+        explanation: "answer should look like 'int x = 5;\\nwhile(x<10){\\n i++}'",
+        correctAnswer: "int k = 0\\nwhile(k < 19){\\nk = k + 2}"
+      },
+      fb8: {
+        question: "What is printed is the input is 42",
+        code: `
+        void jabbaTheHutt(int money);
+
+        int main(){
+          int units;
+          scanf("%d",&units);
+          jabbaTheHutt(money);
+          printf("I still have %d Imperial Cretits",units);
+          return 0;
+        }
+
+        void jabbaTheHutt(int money){
+            printf("You have paid me %d Imperial Credits", money);
+            money = money - 15;
+        }
+        `,
+        explanation: "local variable changes are erased unless returned",
+        correctAnswer: "You have paid me 42 Imperial Credits\\nI still have 42 Imperial Credits"
       }
     }
   },
