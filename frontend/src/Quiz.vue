@@ -311,7 +311,7 @@ export default {
               int buns = 8;
 
               int hamburgers = makeHam(patties, buns);
-              printf("%d hamburgers made\\n",hamburgers);
+              printf("%d hamburgers made ",hamburgers);
 
               barkDog(hamburgers);
 
@@ -333,7 +333,7 @@ export default {
          `,
         explanation:
           "Make sure you know how functions work and how integer division works.",
-        correctAnswer: "3 hamburgers made\\nwoofwoofwoof"
+        correctAnswer: "3 hamburgers made woofwoofwoof"
       },
       fb7: {
         question:
