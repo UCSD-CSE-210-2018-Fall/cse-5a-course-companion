@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header></header>
+    <Navbar></Navbar>
     <b-container id="app"><router-view></router-view></b-container>
   </div>
 </template>
@@ -8,12 +8,12 @@
 <script>
 import "bootstrap/dist/css/bootstrap.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
-import Header from "./components/Header.vue"
+import Navbar from "./components/Navbar.vue"
 
 export default {
   name: "app",
   components: {
-    Header
+    Navbar
   }
 }
 </script>
