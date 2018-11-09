@@ -1,5 +1,5 @@
 <template>
-  <div class="card my-3">
+  <div class="card my-3 multiple-choice">
     <b-card header="<strong>Multiple Choice</strong>">
       <div>
         <div class="mb-3">

@@ -1,5 +1,5 @@
 <template>
-  <div class="card my-3">
+  <div class="card my-3 fill-blank">
     <b-card header="<strong>Fill in the Blank</strong>">
       <div>
         <div class="mb-3">
