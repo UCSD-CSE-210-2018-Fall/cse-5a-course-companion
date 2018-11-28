@@ -5,7 +5,7 @@
     <b-collapse is-nav id="nav_collapse">
       <b-navbar-nav>
         <b-nav-item to="/" exact>Home</b-nav-item>
-        <b-nav-item to="/quiz">Quiz</b-nav-item>
+        <b-nav-item to="/quizzes">Quizzes</b-nav-item>
       </b-navbar-nav>
       <!--
         Right aligned nav items

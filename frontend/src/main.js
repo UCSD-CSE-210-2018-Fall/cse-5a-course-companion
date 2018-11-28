@@ -4,6 +4,7 @@ import BootstrapVue from "bootstrap-vue"
 import UUID from "vue-uuid"
 import App from "./App.vue"
 import Home from "./Home.vue"
+import Quizzes from "./Quizzes.vue"
 import Quiz from "./Quiz.vue"
 
 Vue.config.productionTip = false
@@ -27,7 +28,16 @@ const router = new VueRouter({
             })
         },
         {
-            path: "/quiz",
+            path: "/quizzes",
+            component: Quizzes,
+            props: route => ({
+                to: route.query.to,
+                stage: route.query.stage,
+                bg: route.query.bg
+            })
+        },
+        {
+            path: "/quizzes/:id",
             component: Quiz,
             props: route => ({
                 to: route.query.to,
