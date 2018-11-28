@@ -2,7 +2,7 @@
 
 describe("Quiz Tests", () => {
     beforeEach(function() {
-        cy.visit("/quiz")
+        cy.visit("/quizzes/5bfe87261c9d4400003100b7")
     })
 
     it("should loads", () => {
