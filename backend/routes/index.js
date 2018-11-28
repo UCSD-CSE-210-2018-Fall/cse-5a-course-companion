@@ -6,6 +6,6 @@ router.get("/", function(req, res) {
     res.redirect("https://cse5a.com")
 })
 
-router.use("/v1", apiRouter)
+router.use("/api/v1", apiRouter)
 
 module.exports = router
