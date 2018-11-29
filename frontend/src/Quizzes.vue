@@ -2,9 +2,13 @@
   <div>
     <h2>Quizzes</h2>
     <p v-if="error">{{ error }}</p>
-    <ul>
+    <ul class="list-unstyled">
       <li v-for="(quiz, index) in quizzes" :key="index">
-        <router-link :to="`quizzes/${quiz._id}`">{{ quiz.name }}</router-link>
+        <router-link
+          :to="`quizzes/${quiz._id}`"
+          class="btn btn-outline-dark my-2"
+          >{{ quiz.name }}</router-link
+        >
       </li>
     </ul>
   </div>
