@@ -9,15 +9,18 @@ pool:
 steps:
   - task: NodeTool@0
     inputs:
-      versionSpec: "8.x"
+      versionSpec: "10.x"
     displayName: "Install Node.js"
 
   - script: |
-      cd frontend
-      npm install
-    displayName: "npm install"
+      npm install --prefix frontend
+      npm install --prefix backend
+    displayName: "Install frontend and backend dependencies"
 
   - script: |
-      cd frontend
-      npm run test:e2e
-    displayName: "frontend e2e test"
+      npm run test --prefix backend
+    displayName: "Backend API tests"
+
+  - script: |
+      npm run test:e2e --prefix frontend
+    displayName: "Frontend e2e tests"
