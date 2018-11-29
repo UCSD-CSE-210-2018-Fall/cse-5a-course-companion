@@ -1,6 +1,6 @@
 <template>
-  <div class="card my-3 fill-blank">
-    <b-card header="<strong>Fill in the Blank</strong>">
+  <div class="card fill-blank h-100">
+    <b-card class=" h-100">
       <div>
         <div class="mb-3">
           <p>

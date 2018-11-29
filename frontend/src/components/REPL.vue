@@ -1,6 +1,6 @@
 <template>
-  <div class="card my-3">
-    <b-card header="<strong>Code Exercise</strong>">
+  <div class="card h-100">
+    <b-card class="h-100">
       <div class="mb-3" v-if="question">
         <p>
           <strong>{{ question }}</strong>

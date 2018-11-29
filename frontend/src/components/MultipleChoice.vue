@@ -1,6 +1,6 @@
 <template>
-  <div class="card my-3 multiple-choice">
-    <b-card header="<strong>Multiple Choice</strong>">
+  <div class="card multiple-choice h-100">
+    <b-card class="h-100">
       <div>
         <div class="mb-3">
           <p>
