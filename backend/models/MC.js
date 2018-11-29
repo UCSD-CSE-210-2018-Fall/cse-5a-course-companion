@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 const MCSchema = mongoose.Schema({
     quiz_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "MC",
+        ref: "Quiz",
         required: true
     },
     question: { type: String, required: true },
