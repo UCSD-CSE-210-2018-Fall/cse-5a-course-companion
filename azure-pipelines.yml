@@ -18,9 +18,14 @@ steps:
     displayName: "Install frontend and backend dependencies"
 
   - script: |
+      set DB_PASS=%DB_PASS%
       npm run test --prefix backend
+    env:
+      DB_URI: $(DB_URI)
+      DB_USER: $(DB_USER)
+      DB_PASS: $(DB_PASS)
     displayName: "Backend API tests"
 
   - script: |
       npm run test:e2e --prefix frontend
-    displayName: "Frontend e2e tests"
+    displayName: "End-to-end tests"
