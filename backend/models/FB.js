@@ -6,9 +6,10 @@ const FBSchema = mongoose.Schema({
         ref: "Quiz",
         required: true
     },
-    question: { type: String },
-    user: { type: String, required: true },
-    id: { type: String, required: true }
+    question: { type: String, required: true },
+    code: { type: String },
+    explanation: { type: String, required: true },
+    correctAnswer: { type: String, required: true }
 })
 
 module.exports = mongoose.model("FB", FBSchema, "FBs")
