@@ -19,16 +19,16 @@ describe("Quizzes Test", () => {
             cy.get("@midtermBtn").should("have.text", "Midterm")
         })
         it("should exist", () => {
-            cy.get("@finalBtn").should("have.text","Final")
+            cy.get("@finalBtn").should("have.text", "Final")
         })
 
-        it("should load page", () =>{
+        it("should load page", () => {
             cy.get("@midtermBtn").click()
-            cy.url().should("include","/5bfe87261c9d4400003100b7")
+            cy.url().should("include", "/5bfe87261c9d4400003100b7")
         })
-        it("should load page", () =>{
+        it("should load page", () => {
             cy.get("@finalBtn").click()
-            cy.url().should("include","/5bfeabf22ef481430623fda2")
+            cy.url().should("include", "/5bfeabf22ef481430623fda2")
         })
     })
 })

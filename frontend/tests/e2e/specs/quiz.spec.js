@@ -8,7 +8,6 @@ const choice4 = "div:nth-child(5) > label"
 
 const choices = [choice1, choice2, choice3, choice4]
 
-
 describe("Quiz Tests", () => {
     beforeEach(function() {
         cy.visit("/quizzes/5bfe87261c9d4400003100b7")
@@ -27,8 +26,6 @@ describe("Quiz Tests", () => {
         })
     })
 
-
-
     describe("Multiple Choice component", () => {
         it("should exist", () => {
             expect(cy.get(".multiple-choice")).to.not.be.empty
@@ -36,7 +33,7 @@ describe("Quiz Tests", () => {
 
         it("choices should be active when clicked on", () => {
             cy.get("@MC1").within(() => {
-                choices.forEach((choice) => {
+                choices.forEach(choice => {
                     cy.get(choice).not(".active")
                     cy.get(choice).click()
                     expect(cy.get(choice + ".active")).to.exist
@@ -48,15 +45,15 @@ describe("Quiz Tests", () => {
             cy.get("@MC1").within(() => {
                 cy.get(choice1).click()
                 cy.get("button").click()
-                expect(cy.get('.alert-warning')).to.exist
+                expect(cy.get(".alert-warning")).to.exist
             })
-       })
+        })
 
         it("should display feedback for correct answer", () => {
             cy.get("@MC1").within(() => {
                 cy.get(choice2).click()
                 cy.get("button").click()
-                expect(cy.get('.alert-success')).to.exist
+                expect(cy.get(".alert-success")).to.exist
             })
         })
 
@@ -64,14 +61,12 @@ describe("Quiz Tests", () => {
             cy.get("@MC1").within(() => {
                 cy.get(choice1).click()
                 cy.get("button").click()
-                expect(cy.get('.alert-warning')).to.exist
+                expect(cy.get(".alert-warning")).to.exist
                 cy.get(choice2).click()
-                cy.get('.alert-warning').should("not.be.visible")
+                cy.get(".alert-warning").should("not.be.visible")
             })
         })
     })
-
-
 
     describe("Fill in the Blank components", () => {
         it("should exist", () => {
@@ -87,11 +82,11 @@ describe("Quiz Tests", () => {
         })
 
         it("should give feedback for correct answer", () => {
-           cy.get("@FB1").within(() => {
+            cy.get("@FB1").within(() => {
                 cy.get("#input").type("for(int i = 0; i < 5; i++){}")
                 cy.get("button").click()
                 expect(cy.get(".alert-success")).to.exist
-            }) 
+            })
         })
 
         it("should stop displaying feedback when user starts typing", () => {
@@ -103,22 +98,26 @@ describe("Quiz Tests", () => {
                 cy.get("#input").clear()
                 cy.get("#input").type("wait i think i got it")
                 cy.get(".alert-warning").should("not.be.visible")
-            }) 
+            })
         })
 
         it("submit button should not do anything w/o input", () => {
             cy.get("@FB1").within(() => {
-                expect(cy.get("div").contains("Please enter your answer")).to.exist
+                expect(cy.get("div").contains("Please enter your answer")).to
+                    .exist
                 expect(cy.get("button.disabled")).to.exist
-            }) 
+            })
         })
 
         it("submit button should be enabled with input", () => {
             cy.get("@FB1").within(() => {
-                expect(cy.get("div").contains("Please enter your answer")).to.exist
+                expect(cy.get("div").contains("Please enter your answer")).to
+                    .exist
                 cy.get("#input").type("asdf asdf asdf")
                 expect(cy.get("button").not(".disabled")).to.exist
-                cy.get("div").contains("Please enter your answer").should("not.be.visible")
+                cy.get("div")
+                    .contains("Please enter your answer")
+                    .should("not.be.visible")
             })
         })
     })
