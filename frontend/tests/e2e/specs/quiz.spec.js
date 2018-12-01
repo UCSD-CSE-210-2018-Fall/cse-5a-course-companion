@@ -12,8 +12,8 @@ describe("Quiz Tests", () => {
     beforeEach(function() {
         cy.visit("/quizzes/5bfe87261c9d4400003100b7")
 
-        cy.get("#app > div > div:nth-child(3) > div:nth-child(1)").as("MC1")
-        cy.get("#app > div > div:nth-child(5) > div:nth-child(1)").as("FB1")
+        cy.get("#app > div > div:nth-child(4) > div:nth-child(1)").as("MC1")
+        cy.get("#app > div > div:nth-child(6) > div:nth-child(1)").as("FB1")
     })
 
     it("should loads", () => {
