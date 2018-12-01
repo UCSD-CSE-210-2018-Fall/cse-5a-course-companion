@@ -13,17 +13,17 @@ describe("MultipleChoice.vue", () => {
         }
     })
 
-    it("renders", () => {
+    it("should render successfully", () => {
         const mc_visible = wrapper.isVisible()
         mc_visible.should.be.equal(true)
     })
 
-    it("question content", () => {
+    it("should display question content correctly", () => {
         const question_p = wrapper.find("p")
         question_p.text().should.be.equal("print hello world")
     })
 
-    it("code content", () => {
+    it("should display code content correctly", () => {
         const code = wrapper.find("code")
         code.text().should.be.equal("int i;\nint j = 6;")
     })
