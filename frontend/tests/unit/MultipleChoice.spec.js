@@ -8,8 +8,8 @@ describe("MultipleChoice.vue", () => {
             question: "print hello world",
             code: "int i;\nint j = 6;\n",
             choices: ["one", "two", "three", "four"],
-            explanation: ["one", "two", "three", null],
-            correctAnswer: 3
+            explanations: ["one", "two", "three", null],
+            correctChoice: 3
         }
     })
 
