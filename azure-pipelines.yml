@@ -27,5 +27,9 @@ steps:
     displayName: "Backend API tests"
 
   - script: |
+      npm run test:unit --prefix frontend
+    displayName: "Frontend components unit tests"
+
+  - script: |
       npm run test:e2e --prefix frontend
     displayName: "End-to-end tests"
