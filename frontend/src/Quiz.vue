@@ -1,6 +1,7 @@
 <template>
   <div>
     <h2 class="my-5">{{ quiz.name }} Quiz</h2>
+    <p>Don't be afraid to try an answer. Hints are available.</p>
     <h3 class="my-4">Multiple Choice Questions</h3>
     <b-row>
       <b-col class="my-3" md="6" v-for="(mc, index) in mcs" :key="index">
