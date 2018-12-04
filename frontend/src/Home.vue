@@ -1,7 +1,18 @@
 <template>
   <div>
-    <h2>Welcome</h2>
-    <p>CSE5A Course Companion</p>
+    <b-jumbotron
+      header="Welcome"
+      header-tag="h2"
+      header-level="4"
+      lead="CSE5A Course Companion"
+      bg-variant="transparent"
+      fluid="true"
+    >
+      <p>
+        Helps you succeed in CSE5A with engaging, interactive, and personalized
+        tools.
+      </p>
+    </b-jumbotron>
   </div>
 </template>
 
