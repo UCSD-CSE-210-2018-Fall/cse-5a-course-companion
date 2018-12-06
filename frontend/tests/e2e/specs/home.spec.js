@@ -6,6 +6,6 @@ describe("Home Test", () => {
     })
 
     it("should loads", () => {
-        cy.get("h2").should("exist")
+        cy.get("h2").contains("Welcome")
     })
 })
